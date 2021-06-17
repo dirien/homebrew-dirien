@@ -9,6 +9,6 @@ Install the following apps via this Homebrew tap:
 * k3sair
 
 ```bash
-brew tap alexellis/homebrew-dirien
+brew tap dirien/homebrew-dirien
 brew install k3sair
 ```
