@@ -12,14 +12,14 @@ class Minectl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dirien/minectl/releases/download/v0.1.0/minectl_0.1.0_darwin_amd64.tar.gz"
-      sha256 "475507c493ac5e0a88226f271b3d5e3184d08cc4cab7187e94bc279137c631c9"
+      sha256 "48641eb64b5efa5bbef3bd83f0112674e94d28140e0e92ba9992d7d3706fef1d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/dirien/minectl/releases/download/v0.1.0/minectl_0.1.0_linux_amd64.tar.gz"
-      sha256 "65cae52c483e4cce434609f70dde72ad11255c059b6121d18e89af79cf06c83d"
+      sha256 "91184128c6f15a33d374754cbb6d92d44c31175a7b89af2d272cdf31a917d586"
     end
   end
 
