@@ -5,21 +5,21 @@
 class Minectl < Formula
   desc "minectl️️ 🗺️ is a cli for creating Minecraft (java or bedrock) server on different cloud provider."
   homepage "https://github.com/dirien/minectl"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache License 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.2.0/minectl_0.2.0_darwin_amd64.tar.gz"
-      sha256 "75c161469589ab22b2087b16a185ff028acd040533ca9d65d4c657bd52f62ee7"
+      url "https://github.com/dirien/minectl/releases/download/v0.2.1/minectl_0.2.1_darwin_amd64.tar.gz"
+      sha256 "3e2f549094b5782846c49cb3ad41035bcf76fcd25980cd4ac8e8a48dd7da0748"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.2.0/minectl_0.2.0_linux_amd64.tar.gz"
-      sha256 "0b7e9cee598637ca82bc10978a15f60c5b4e6ef6a019c5bfa6525b0af70fce05"
+      url "https://github.com/dirien/minectl/releases/download/v0.2.1/minectl_0.2.1_linux_amd64.tar.gz"
+      sha256 "ae13111c0fdcf456bd4f825997b5e4c2d86058147c0c1cb6f304d71a6387a4b6"
     end
   end
 
