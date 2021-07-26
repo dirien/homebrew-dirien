@@ -5,21 +5,29 @@
 class Tfu < Formula
   desc "tfu is a Terraform helper to update the providers."
   homepage "https://github.com/dirien/tfu"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache License 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.1.0/tfu_0.1.0_darwin_amd64.tar.gz"
-      sha256 "c91f381c3172a1458cc96b59bfb112fa5dc725aac51202fabbc7b591f787d523"
+      url "https://github.com/dirien/tfu/releases/download/v0.1.1/tfu_0.1.1_darwin_amd64.tar.gz"
+      sha256 "f1cd3db41ca39d4cb6937ee35e01580639accbb139f4580ec433bf48f67d5f06"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/dirien/tfu/releases/download/v0.1.1/tfu_0.1.1_darwin_arm64.tar.gz"
+      sha256 "61ceb65e94906f02348845c0e25afc3bf079f2f6fd565a2de6405c4d3d37a524"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.1.0/tfu_0.1.0_linux_amd64.tar.gz"
-      sha256 "fe019febee8ea3109b29fbd77167e3bb9a1704e1c4d8ccf3804079aaa44af3bd"
+      url "https://github.com/dirien/tfu/releases/download/v0.1.1/tfu_0.1.1_linux_amd64.tar.gz"
+      sha256 "d9d1eac84f1acc175c62c2699c5a7a9d659051b0a1aaa22aa4d3403ca0461169"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dirien/tfu/releases/download/v0.1.1/tfu_0.1.1_linux_arm64.tar.gz"
+      sha256 "95099387881c379be62fdd16d089f0ff03ff3e260ba48fc4c326ce3b422b7e1a"
     end
   end
 
