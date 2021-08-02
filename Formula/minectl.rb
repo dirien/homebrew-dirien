@@ -5,21 +5,29 @@
 class Minectl < Formula
   desc "minectl️️ 🗺️ is a cli for creating Minecraft (java or bedrock) server on different cloud provider."
   homepage "https://github.com/dirien/minectl"
-  version "0.5.0"
+  version "0.6.0"
   license "Apache License 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.5.0/minectl_0.5.0_darwin_amd64.tar.gz"
-      sha256 "a537eb4742435e4520398cc6490d0169bf3850027384622145067fe757790d5a"
+      url "https://github.com/dirien/minectl/releases/download/v0.6.0/minectl_0.6.0_darwin_amd64.tar.gz"
+      sha256 "8159c634fb028e9dfb6324fc7e2430a4dd98855dc93c1a23a86da10e2392f291"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/dirien/minectl/releases/download/v0.6.0/minectl_0.6.0_darwin_arm64.tar.gz"
+      sha256 "409f5d5e8a77354cc03c1a4f68639e76b4f5b37a42dae6842d3fb84c3c90d777"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.5.0/minectl_0.5.0_linux_amd64.tar.gz"
-      sha256 "6f2603266c9a72fa71edf309769e794fbdacc92ac84ab844579ab0fd8bf13488"
+      url "https://github.com/dirien/minectl/releases/download/v0.6.0/minectl_0.6.0_linux_amd64.tar.gz"
+      sha256 "7389865b49ed8ecb24fe6ebabc6a621ebd9ec738ad2d3ecef403f883089a4987"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dirien/minectl/releases/download/v0.6.0/minectl_0.6.0_linux_arm64.tar.gz"
+      sha256 "f9010e9de5344aba6619cc8faa170f3a917e9eb06eeea126d548e61969ac6d1d"
     end
   end
 
