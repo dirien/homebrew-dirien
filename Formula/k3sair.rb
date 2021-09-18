@@ -5,21 +5,21 @@
 class K3sair < Formula
   desc "K3SAIR 🏴‍☠️️ ('Corsair') is a cli for the installation of k3s in an Air-Gapped environment."
   homepage "https://github.com/dirien/k3sair-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache License 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.1.0/k3sair_0.1.0_darwin_amd64.tar.gz"
-      sha256 "9e6ed75930fdc296ec8325b202bdefe82f9753a0059e2e87477c86a89d43d96e"
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.2.0/k3sair_0.2.0_darwin_amd64.tar.gz"
+      sha256 "9c57866b421e7db80e6cb63b837d17e12234a0e6c6a84f05af52c3b425aeb698"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.1.0/k3sair_0.1.0_linux_amd64.tar.gz"
-      sha256 "416fc3d4a5e829d8f82cb5de9c8230793220c2eb5a522dc139f01976bdbc01ec"
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.2.0/k3sair_0.2.0_linux_amd64.tar.gz"
+      sha256 "56ec998fc0ca858371281140219bbfe649b9fcd1b5a0caa6d721b2f054f05b5f"
     end
   end
 
