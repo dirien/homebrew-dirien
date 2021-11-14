@@ -5,33 +5,44 @@
 class Tfu < Formula
   desc "tfu is a Terraform helper to update the providers."
   homepage "https://github.com/dirien/tfu"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache License 2.0"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.3.0/tfu_0.3.0_darwin_amd64.tar.gz"
-      sha256 "8a85a34b85bf4e62519854b67e1b9e66e272fb0572c847a0cf7ba4cd34f3f556"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/dirien/tfu/releases/download/v0.3.0/tfu_0.3.0_darwin_arm64.tar.gz"
-      sha256 "a82e00a025ff798637d97dc4a5532300f9e8d3cb3ad7d077ad05fcfd8732314a"
+      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_darwin_arm64.tar.gz"
+      sha256 "e615c0fbb44c2ca3d0ba5dfcee019419e7a9a908d72b4a9d616f506271aafc37"
+
+      def install
+        bin.install "tfu"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_darwin_amd64.tar.gz"
+      sha256 "2dd379ba972185e22b637e240c56b403ca541ad446e4fc9d4d9e08efee7b46c6"
+
+      def install
+        bin.install "tfu"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.3.0/tfu_0.3.0_linux_amd64.tar.gz"
-      sha256 "85db3576516720760685d30cec2e657eaa7451158c7051bbd1cc580a8ce068ee"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/tfu/releases/download/v0.3.0/tfu_0.3.0_linux_arm64.tar.gz"
-      sha256 "fb220cc506754c6c30b13bdc1f6a5ee9620d76e177792c123a185d1e401c7c0b"
-    end
-  end
+      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_linux_arm64.tar.gz"
+      sha256 "12dbf458ec4fb061e8ec134a438bcb2c4e11ebf255b13a49af8f03565b97b888"
 
-  def install
-    bin.install "tfu"
+      def install
+        bin.install "tfu"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_linux_amd64.tar.gz"
+      sha256 "29744e1a0277b0f15d6b15b2f934ac52cf622f6f3c1a30a59bbbcfda865a9130"
+
+      def install
+        bin.install "tfu"
+      end
+    end
   end
 end
