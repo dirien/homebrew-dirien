@@ -5,21 +5,21 @@
 class Tfu < Formula
   desc "tfu is a Terraform helper to update the providers."
   homepage "https://github.com/dirien/tfu"
-  version "0.4.0"
+  version "0.4.1"
   license "Apache License 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_darwin_arm64.tar.gz"
-      sha256 "e615c0fbb44c2ca3d0ba5dfcee019419e7a9a908d72b4a9d616f506271aafc37"
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_darwin_amd64.tar.gz"
+      sha256 "f93c727c6febec44dc12b310db9d2f675aebf36108453d44736d1cfd6a69a585"
 
       def install
         bin.install "tfu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_darwin_amd64.tar.gz"
-      sha256 "2dd379ba972185e22b637e240c56b403ca541ad446e4fc9d4d9e08efee7b46c6"
+    if Hardware::CPU.arm?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_darwin_arm64.tar.gz"
+      sha256 "c9bd1b5cb7564cf74b7cd84b1c2c8d649630154b1a518bff85f54c0a441be5c0"
 
       def install
         bin.install "tfu"
@@ -29,16 +29,16 @@ class Tfu < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_linux_arm64.tar.gz"
-      sha256 "12dbf458ec4fb061e8ec134a438bcb2c4e11ebf255b13a49af8f03565b97b888"
+      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_linux_arm64.tar.gz"
+      sha256 "b0f235d56f4e1c58b2b3134611d6df7df531aa9528c4e9dafabcf101f12ef912"
 
       def install
         bin.install "tfu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.0/tfu_0.4.0_linux_amd64.tar.gz"
-      sha256 "29744e1a0277b0f15d6b15b2f934ac52cf622f6f3c1a30a59bbbcfda865a9130"
+      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_linux_amd64.tar.gz"
+      sha256 "68b68d8dbbf7a1e6e983e6ed8c09f08c8ecb39e7f992f8089777ceb5d422b4a2"
 
       def install
         bin.install "tfu"
