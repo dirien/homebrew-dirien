@@ -5,21 +5,21 @@
 class Tfu < Formula
   desc "tfu is a Terraform helper to update the providers."
   homepage "https://github.com/dirien/tfu"
-  version "0.4.1"
+  version "0.4.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_darwin_amd64.tar.gz"
-      sha256 "f93c727c6febec44dc12b310db9d2f675aebf36108453d44736d1cfd6a69a585"
+      url "https://github.com/dirien/tfu/releases/download/v0.4.2/tfu_0.4.2_darwin_amd64.tar.gz"
+      sha256 "4af54767880a87c1d46ccbf506c4af0f84c5893d514b04fb3f0cca1f540a8894"
 
       def install
         bin.install "tfu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_darwin_arm64.tar.gz"
-      sha256 "c9bd1b5cb7564cf74b7cd84b1c2c8d649630154b1a518bff85f54c0a441be5c0"
+      url "https://github.com/dirien/tfu/releases/download/v0.4.2/tfu_0.4.2_darwin_arm64.tar.gz"
+      sha256 "65f09922bf3fee00f2244973f165f7b6b51c06b695d87b616287700ce719c539"
 
       def install
         bin.install "tfu"
@@ -28,17 +28,17 @@ class Tfu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_linux_arm64.tar.gz"
-      sha256 "b0f235d56f4e1c58b2b3134611d6df7df531aa9528c4e9dafabcf101f12ef912"
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.2/tfu_0.4.2_linux_amd64.tar.gz"
+      sha256 "85d9d2822c043053fcbfc71b24da2c1e302302936498b5533cb14710bc136e72"
 
       def install
         bin.install "tfu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/tfu/releases/download/v0.4.1/tfu_0.4.1_linux_amd64.tar.gz"
-      sha256 "68b68d8dbbf7a1e6e983e6ed8c09f08c8ecb39e7f992f8089777ceb5d422b4a2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dirien/tfu/releases/download/v0.4.2/tfu_0.4.2_linux_arm64.tar.gz"
+      sha256 "1b52c5eaa70f1f4014c59f2f5c85ec2efb33e0e61983e265d35fbb81d27eb77f"
 
       def install
         bin.install "tfu"
