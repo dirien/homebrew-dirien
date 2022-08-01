@@ -5,21 +5,21 @@
 class K3sair < Formula
   desc "K3SAIR 🏴‍☠️️ ('Corsair') is a cli for the installation of k3s in an Air-Gapped environment."
   homepage "https://github.com/dirien/k3sair-cli"
-  version "0.3.2"
+  version "0.4.0"
   license "Apache License 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.3.2/k3sair_0.3.2_darwin_amd64.tar.gz"
-      sha256 "daa3da45cbbd58e0a5fe1f4d4c2bdbae87c5489a4ce3d365086bd9b2485b3c56"
+    if Hardware::CPU.arm?
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.4.0/k3sair_0.4.0_darwin_arm64.tar.gz"
+      sha256 "dbf98bacd3627d152cda32ea0a7b5f9181d2aa79938802460f5f0e9b0d2acdbf"
 
       def install
         bin.install "k3sair"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.3.2/k3sair_0.3.2_darwin_arm64.tar.gz"
-      sha256 "edc42675a61bb7ef8e372cf87a4c24811b9e48e92e662389a2550952e199bf59"
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.4.0/k3sair_0.4.0_darwin_amd64.tar.gz"
+      sha256 "eebacb15cdd9852572485c974820c71173c63347edca038e65824967573ace9f"
 
       def install
         bin.install "k3sair"
@@ -29,16 +29,16 @@ class K3sair < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.3.2/k3sair_0.3.2_linux_arm64.tar.gz"
-      sha256 "0b5a4a9ff75609c4cca3c9cd48d1939be2ff7465a7208a89d411edb176468897"
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.4.0/k3sair_0.4.0_linux_arm64.tar.gz"
+      sha256 "86edb5f251314c6e6fff5f9ad203ef49312d175cc241ff2bfcaff891f12b9956"
 
       def install
         bin.install "k3sair"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/k3sair-cli/releases/download/0.3.2/k3sair_0.3.2_linux_amd64.tar.gz"
-      sha256 "7a3a9003e68dbb5263c48993148d551772848b9a538ea80e64f80f5db968791a"
+      url "https://github.com/dirien/k3sair-cli/releases/download/0.4.0/k3sair_0.4.0_linux_amd64.tar.gz"
+      sha256 "7186c6b2a501148d05c0f105d1b4efaef6927481e6554a384ed4c5a6188a4e81"
 
       def install
         bin.install "k3sair"
