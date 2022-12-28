@@ -5,21 +5,21 @@
 class Minectl < Formula
   desc "minectl️️ 🗺️ is a cli for creating Minecraft (java or bedrock) server on different cloud provider."
   homepage "https://github.com/dirien/minectl"
-  version "0.26.0"
+  version "0.27.0"
   license "Apache License 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.26.0/minectl_0.26.0_darwin_amd64.tar.gz"
-      sha256 "af2c538c1d2950a116a793573803e134c77c42e6a3aa6d8eb52af6ef7dd75d90"
+    if Hardware::CPU.arm?
+      url "https://github.com/dirien/minectl/releases/download/v0.27.0/minectl_0.27.0_darwin_arm64.tar.gz"
+      sha256 "68a61a454d073d85f3483e6849e94d4b6cc21e9ff7499b15960f6b51bb33d140"
 
       def install
         bin.install "minectl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dirien/minectl/releases/download/v0.26.0/minectl_0.26.0_darwin_arm64.tar.gz"
-      sha256 "5a4695d44a3453ca03f39c225ce62356f7fac9fc8ae04952db8f30d05157a546"
+    if Hardware::CPU.intel?
+      url "https://github.com/dirien/minectl/releases/download/v0.27.0/minectl_0.27.0_darwin_amd64.tar.gz"
+      sha256 "884eac9c611546b56f460fb1fbe3cfc2446c588b9351ff52e87757c844a900ac"
 
       def install
         bin.install "minectl"
@@ -29,16 +29,16 @@ class Minectl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/minectl/releases/download/v0.26.0/minectl_0.26.0_linux_arm64.tar.gz"
-      sha256 "0ae41a5bf5909fb33db85c6bc9a872772789efccb22d316df82762230d28d867"
+      url "https://github.com/dirien/minectl/releases/download/v0.27.0/minectl_0.27.0_linux_arm64.tar.gz"
+      sha256 "07110abf8f027cfe5ca56645b93c7ea927ab920e6b0e1712ad41634569538964"
 
       def install
         bin.install "minectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/minectl/releases/download/v0.26.0/minectl_0.26.0_linux_amd64.tar.gz"
-      sha256 "8b23674dd7faeb6e251329093866c6b2ab969addcaa13681824f82ba6ce013e0"
+      url "https://github.com/dirien/minectl/releases/download/v0.27.0/minectl_0.27.0_linux_amd64.tar.gz"
+      sha256 "8eb8be67e839e8ef0d649601bff905bc85fa6e232be6dde2e1a7cfff922ef860"
 
       def install
         bin.install "minectl"
