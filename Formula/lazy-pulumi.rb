@@ -5,21 +5,21 @@
 class LazyPulumi < Formula
   desc "A stylish TUI for Pulumi Cloud, ESC, and NEO"
   homepage "https://github.com/dirien/lazy-pulumi"
-  version "0.6.1"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.6.1/lazy-pulumi_0.6.1_darwin_amd64.tar.gz"
-      sha256 "d5690d48f96b64473338fc6c43060daffb6457200c8a37de62f8da5e36da7fb3"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.7.0/lazy-pulumi_0.7.0_darwin_amd64.tar.gz"
+      sha256 "ff2d858fa548129ab0985898d7568d8269654f8bedaea8c95d575aed34b4f0a2"
 
       def install
         bin.install "lazy-pulumi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.6.1/lazy-pulumi_0.6.1_darwin_arm64.tar.gz"
-      sha256 "3e9024731f49bc8c7a61b50c541340e494ae22ce03f5433831f59669d543e612"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.7.0/lazy-pulumi_0.7.0_darwin_arm64.tar.gz"
+      sha256 "e15a5767befb2ad83022ab3d90ed7da8fe9822a81ddb095a24e0ff94ea3040a0"
 
       def install
         bin.install "lazy-pulumi"
@@ -29,15 +29,15 @@ class LazyPulumi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.6.1/lazy-pulumi_0.6.1_linux_amd64.tar.gz"
-      sha256 "9ca942d967956adfe4cebe7b91022c985a07b24c148fd6e9c368b991861c7606"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.7.0/lazy-pulumi_0.7.0_linux_amd64.tar.gz"
+      sha256 "565241c3e0dc754f88182680ebbeb0293485ba0355213c7d30bd9d5007b0fd18"
       def install
         bin.install "lazy-pulumi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.6.1/lazy-pulumi_0.6.1_linux_arm64.tar.gz"
-      sha256 "7b7e971f1b3c94c9efeddb74998ae4c181c22295d3ce84b56198950779395099"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.7.0/lazy-pulumi_0.7.0_linux_arm64.tar.gz"
+      sha256 "48fe5be4a1759963cc5c8b25ab3f0f4dbb442501b8dc5fd6572fffce47e090a9"
       def install
         bin.install "lazy-pulumi"
       end
