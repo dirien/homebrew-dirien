@@ -5,21 +5,21 @@
 class PulumiCcstatusline < Formula
   desc "Pulumi stack info in your Claude Code status line"
   homepage "https://github.com/dirien/pulumi-ccstatusline"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.0/pulumi-ccstatusline_0.1.0_darwin_amd64.tar.gz"
-      sha256 "8b948dcd3f504d3768d0903b8fadfb5fb172cfc2c4fda6f00fbc416082e44614"
+      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.1/pulumi-ccstatusline_0.1.1_darwin_amd64.tar.gz"
+      sha256 "9952a97ba9101361ce812718aca9c04244c2a7db1a26a3fb4884f8daade3bddd"
 
       def install
         bin.install "pulumi-ccstatusline"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.0/pulumi-ccstatusline_0.1.0_darwin_arm64.tar.gz"
-      sha256 "c5a64cf85387f714c6574ae405e9a825d0a4751dfd04370d541545587ea7b116"
+      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.1/pulumi-ccstatusline_0.1.1_darwin_arm64.tar.gz"
+      sha256 "3112ed13a5ed023a0dc370d7aebbbd80175a9ed3b542ad01f2b72759b0fd7e71"
 
       def install
         bin.install "pulumi-ccstatusline"
@@ -29,15 +29,15 @@ class PulumiCcstatusline < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.0/pulumi-ccstatusline_0.1.0_linux_amd64.tar.gz"
-      sha256 "22591076cefd50adea41e45372dbda862f64dc2493f19a234cc39cdf40c1db36"
+      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.1/pulumi-ccstatusline_0.1.1_linux_amd64.tar.gz"
+      sha256 "29b80c8202d2ab784019013b2c673c0cdebe4d9accdc61f8edd1b922bdef6453"
       def install
         bin.install "pulumi-ccstatusline"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.0/pulumi-ccstatusline_0.1.0_linux_arm64.tar.gz"
-      sha256 "9aef57eb773a6c5e9520f1c1ea341c5658da9ecc17948253178cccd97a44cc04"
+      url "https://github.com/dirien/pulumi-ccstatusline/releases/download/v0.1.1/pulumi-ccstatusline_0.1.1_linux_arm64.tar.gz"
+      sha256 "183a37d02c0cafbfb5c2813f194cbb08c5a5156a159c768b3b13374e30f5500c"
       def install
         bin.install "pulumi-ccstatusline"
       end
