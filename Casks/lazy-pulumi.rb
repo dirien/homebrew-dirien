@@ -2,7 +2,7 @@
 cask "lazy-pulumi" do
   desc "A stylish TUI for Pulumi Cloud, ESC, and NEO"
   homepage "https://github.com/dirien/lazy-pulumi"
-  version "0.9.0"
+  version "0.9.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "lazy-pulumi" do
 
   on_macos do
     on_intel do
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.0/lazy-pulumi_0.9.0_darwin_amd64.tar.gz"
-      sha256 "ccba48f68c8e7722423bd6de041a7b3164e10cb9307b9d84d59a57e6f8a2abc0"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.1/lazy-pulumi_0.9.1_darwin_amd64.tar.gz"
+      sha256 "dc56b7fb53d0915be26cfcc24d04c3fd90c4aef2581d33aded94633b52c4813f"
     end
     on_arm do
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.0/lazy-pulumi_0.9.0_darwin_arm64.tar.gz"
-      sha256 "2637c8d511e12131d77ab278758435a1355bb7f54469f0fc73ab36606c194c29"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.1/lazy-pulumi_0.9.1_darwin_arm64.tar.gz"
+      sha256 "96631466eb6c9af179a2448b577b3eb717d7e08cffa9a9deda828d030cf1ec51"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.0/lazy-pulumi_0.9.0_linux_amd64.tar.gz"
-      sha256 "004a38c96b512b62029e7d227d4a91f518aa7a444b1fc16e9ba2e3c7a4f8231f"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.1/lazy-pulumi_0.9.1_linux_amd64.tar.gz"
+      sha256 "2c5afdd214b89bced9a54cfb771d057e26aa8844e75ca7c647aeea1202a46773"
     end
     on_arm do
-      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.0/lazy-pulumi_0.9.0_linux_arm64.tar.gz"
-      sha256 "27c67386deb8785a10e34efda60047fc8c3c7fdff9a7b98040780e452285e7fc"
+      url "https://github.com/dirien/lazy-pulumi/releases/download/v0.9.1/lazy-pulumi_0.9.1_linux_arm64.tar.gz"
+      sha256 "e4f886b36dd9292945fc85d8f28aa82dc5bfd8bd57b903ce1d8ec98ac90e1539"
     end
   end
 
